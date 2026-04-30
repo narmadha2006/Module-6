@@ -1,42 +1,40 @@
-# 🐍 Python OOP: Encapsulation with Private Members
+# 🐟 Method Overriding-Fish and Shark Class Inheritance in Python
 
-## 🎯 AIM
+## 🧠 AIM:
+To write a Python program that demonstrates class inheritance by creating a parent class `Fish` with a method `type`, and a child class `Shark` that overrides the `type` method.
 
-To implement **Encapsulation** in Python by defining a class `Rectangle` with **private member variables** `__length` and `__breadth`.
+## 📋 ALGORITHM:
 
----
+1. Define the `Fish` class with a method named `type()` that prints `"fish"`.
+2. Define the `Shark` class as a subclass of `Fish`, and override the `type()` method to print `"shark"`.
+3. Create an instance of the `Fish` class named `obj_goldfish`.
+4. Create an instance of the `Shark` class named `obj_hammerhead`.
+5. Use a `for` loop to iterate over both objects.
+6. Within the loop, call the `type()` method using the loop variable.
+7. Output will demonstrate method overriding: printing `"fish"` and `"shark"` accordingly.
 
-## 🧠 ALGORITHM
-
-1. **Define the Class**:
-   - Create a class `Rectangle` with two private attributes: `__length` and `__breadth`.
-
-2. **Initialize Variables**:
-   - Use the `__init__()` constructor to set initial values for `__length` and `__breadth`.
-
-3. **Print Values**:
-   - Display the private variables from within the class to demonstrate access.
-
-4. **Instantiate the Object**:
-   - Create an object of the `Rectangle` class to trigger the constructor.
-
----
-
-## 💻 Program
+## 💻 PROGRAM:
 ~~~
-  class Rectangle:
-    __length = 0 
-    __breadth = 0
-    def __init__(self):
-      self.__length = 5
-      self.__breadth = 3
-      print(self.__length)
-      print(self.__breadth)
-   
-  obj = Rectangle()
-~~~
-## Output
-![447089547-3c2f25c9-0edb-4668-baa0-683b429e2fdb](https://github.com/user-attachments/assets/eeda5217-9271-46c9-bc22-a532f2233de4)
+# Parent Class
+class Fish:
+    def type(self):
+        print("This is a fish")
 
-## Result
-The program successfully implements encapsulation by using private variables and public methods to set and get data.
+# Child Class
+class Shark(Fish):
+    def type(self):
+        print("This is a shark")
+
+# Creating objects
+f = Fish()
+s = Shark()
+
+
+f.type()
+s.type()
+~~~
+## OUTPUT
+![447090323-8c5f152d-693c-45d5-aaf5-00278b7dbb12](https://github.com/user-attachments/assets/1ad2f858-a3a8-436b-82f5-6941a09c40bf)
+
+## RESULT
+The program successfully demonstrates class inheritance and method overriding in Python.
